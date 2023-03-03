@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<style>
+h1{
+    text-align: center;
+}
+body {
+    background-color: lightblue;
+}
+input{
+    width:90%;
+    margin:3px 40px;
+    border-radius:5px;
+    border: 2px solid #000000;
+    padding: 10px;
+}
+label{
+    font-weight:bold;
+}
+.center{
+    width:60%;
+    margin:auto;
+    border: 2px solid #000000;
+    padding: 10px;
+}
+#main{
+    margin:auto;
+}
+</style>
 </head>
 <body>
-
-<h2>註冊</h2>
-
+<div id="main">
+<div class="center">
+<h1>註冊</h1>
 <form>
     <input type="text" placeholder="姓名">
-    <br><br>
+    <br>
     <input type="text" placeholder="帳號">
-    <br><br>
+    <br>
     <input type="password" placeholder="密碼">
-    <br><br>
+    <br>
     <input type="email" placeholder="信箱">
-    <br><br>
-    <label for="birthday">生日:</label>
+    <br>
+    <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="電話號碼 例:xxxx-xxx-xxx">
+    <br>
     <input type="date">
     <br><br>
-    <label for="gender">性別：</label>
-    <input type="radio" name="gender" value="男性">
-    <label for="boy">男性</label>
-    <input type="radio" name="gender" value="女性">
-    <label for="girl">女性</label>
+    <label for="gender" style="margin:3px 0px 3px 40px;">性別：</label>
+    <select id="gender" name="gender">
+        <option value="男生">男生</option>
+        <option value="女生">女生</option>
+    </select>
+    <label for="bloodtype" style="margin:3px 0px 3px 40px;">血型：</label>
+    <select id="bloodtype" name="bloodtype">
+        <option value="A型">A型</option>
+        <option value="B型">B型</option>
+        <option value="AB型">AB型</option>
+        <option value="O型">O型</option>
+    </select>
     <br><br>
-    <label for="gender">血型：</label>
-    <input type="radio" name="bloodtype" value="A型">
-    <label for="A">A型</label>
-    <input type="radio" name="bloodtype" value="B型">
-    <label for="B">B型</label>
-    <input type="radio" name="bloodtype" value="AB型">
-    <label for="B">AB型</label>
-    <input type="radio" name="bloodtype" value="O型">
-    <label for="B">O型</label>
-    <br><br>
-    <label>選擇自己喜歡的顏色:</label>
-    <input type="color" value="#ffffff">
-    <br><br>
-    <input type="submit" value="註冊">
+    <input type="submit" value="送出">
     <input type="reset" value="重新輸入">
 </form> 
+</div>
+</div>
 </body>
 </html>
