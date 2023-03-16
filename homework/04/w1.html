@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="w1.css"/>
+</head>
+<body>
+
+<h1>第一章：HTML</h1>
+
+<h2>1.1. 什麼是 HTML</h2>
+
+<p>HTML (Hyper Text Markup Language) 超文本標記語言，一種建立網頁的標準標記語言，用來組織架構並呈現網頁內容的程式語言，常與CSS與JavaScript一起使用在網頁設計上。(CSS：用於美化HTML/ JavaScript：用於增加網頁互動性)</p>
+
+<h2>1.2. HTML 連結範例</h2>
+
+<pre>
+    &lt;html&gt;
+    &lt;body&gt;
+        &lt;a href="https://youtube.com"&gt;Youtube&lt;/a&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+
+<h2>1.3. HTML 表格</h2>
+
+<table id="customers">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Berglunds snabbköp</td>
+      <td>Christina Berglund</td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+    <tr>
+      <td>Ernst Handel</td>
+      <td>Roland Mendel</td>
+      <td>Austria</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Königlich Essen</td>
+      <td>Philip Cramer</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Yoshi Tannamuri</td>
+      <td>Canada</td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      <td>Italy</td>
+    </tr>
+    <tr>
+      <td>North/South</td>
+      <td>Simon Crowther</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Paris spécialités</td>
+      <td>Marie Bertrand</td>
+      <td>France</td>
+    </tr>
+</table>
+
+<h1>第二章：CSS</h1>
+
+<h2>1.1. 什麼是 CSS</h2>
+
+<p>CSS既不是標準程式語言，也不是標記語言, 而是一種風格頁面語言（style sheet language），它能讓你在 HTML 文件中的元素（element）上套用不同的頁面樣式（style）</p>
+    
+<h2>1.2. CSS 範例</h2>
+    
+<pre>
+    h1 {
+        text-align: center;
+    }
+</pre>
+
+<h1>註冊畫面</h1>
+<form>
+    <input type="text" placeholder="姓名">
+    <br>
+    <input type="text" placeholder="帳號">
+    <br>
+    <input type="password" placeholder="密碼">
+    <br>
+    <input type="email" placeholder="信箱">
+    <br>
+    <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="電話號碼 例:xxxx-xxx-xxx">
+    <br>
+    <input type="date">
+    <br><br>
+    <label for="gender" style="margin:3px 0px 3px 40px;">性別：</label>
+    <select id="gender" name="gender">
+        <option value="男生">男生</option>
+        <option value="女生">女生</option>
+    </select>
+    <label for="bloodtype" style="margin:3px 0px 3px 40px;">血型：</label>
+    <select id="bloodtype" name="bloodtype">
+        <option value="A型">A型</option>
+        <option value="B型">B型</option>
+        <option value="AB型">AB型</option>
+        <option value="O型">O型</option>
+    </select>
+    <br><br>
+    <input type="submit" value="送出">
+    <input type="reset" value="重新輸入">
+</form> 
+
+</body>
+</html>

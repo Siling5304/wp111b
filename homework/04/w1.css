@@ -1,0 +1,58 @@
+h1{
+    text-align: center;
+}
+
+p{
+    margin: 20px;
+}
+
+body{
+    margin: 20px 10%;
+    background-color: floralwhite;
+}
+
+pre {
+    background-color: lightgray;
+    border:1px dotted gray;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+table{
+    width:100%;
+    font-size:14px;
+    table-layout:fixed;
+    border:1px solid black;
+}
+
+th{
+    border:1px solid black;
+    padding:6px 12px;
+    text-align: center;
+}
+
+td{
+    border:1px solid black;
+    padding:6px 12px;
+}
+
+tr{ 
+    border:1px solid black;
+    border-radius: 20px;
+}
+
+form{
+    width:60%;
+    margin:auto;
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+input{
+    width:90%;
+    margin: 3px 30px;
+    border-radius:5px;
+    border: 2px solid #000000;
+    padding: 10px;
+}
