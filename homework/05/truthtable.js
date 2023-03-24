@@ -6,4 +6,4 @@ function truthTable(n){
     }
 }
 
-truthTable(2)
+truthTable(4)
