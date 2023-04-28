@@ -9,43 +9,44 @@
             width: 40px;
             height: 100%;
             transition: width 1s;
+            display: inline-block;
+            float: left;
         }
-        #nav:hover{
+        #nav:hover {
             width: 200px;
         }
-
-/*
-        #navMain {
+        #navMain{
             padding-left: 40px;
             padding-top: 40px;
-        }*/
+        }
         #nav a {
-            padding-left: 40px;
-            padding-top: 40px;
             color: white;
             white-space: nowrap;
             text-decoration: none;
         }
+        #nav a:hover {
+            color:pink;
+        }
+        #main{
+            padding: 10px 50px;
+        }
     </style>
 </head>
 <body>
-    <div id = "nav" onmouseover="navWide()" onmouseout="navNarrow()">
+    <div id = "nav">
         <div id = "navMain">
             <p><a href="#aboutus">關於本站</a></p>
             <p><a href="#example1">範例1</a></p>
             <p><a href="#example2">範例2</a></p>
-            <p><a href="#example3">範例3</a></p>
-        </div>            
+            <p><a href="#example3">範例3</a></p>       
+        </div>
     </div>
-    <script>
-        function navWide() {
-            let nav = document.getElementById("nav")
-            nav.style.width = "200px"
-        }
-        function navNarrow() {
-            let nav = document.getElementById("nav")
-            nav.style.width = "40px"
-        }
-    </script>
+    <div style="padding: 10px;">
+        <div id="main">
+            xxxx
+        </div>    
+    </div>
+    
+    <script src="navbar2.js"></script>
 </body>
 </html>
