@@ -18,3 +18,4 @@ function monthToIndex(month){
 }
 
 console.log("October is:",monthToIndex("October"))
+console.log("April is:",monthToIndex("April"))
