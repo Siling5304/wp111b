@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>井字遊戲</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+
+        .board {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            margin: 0px 600px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const cells = document.querySelectorAll('.cell');
+            const restartBtn = document.getElementById('restartBtn');
+            let currentPlayer = 'O';
+            let gameEnded = false;
+
+            function cellClick(event) {
+                if (gameEnded || event.target.textContent !== '') return;
+
+                event.target.textContent = currentPlayer;
+                event.target.classList.add(currentPlayer);
+
+
+                if (checkWin()) {
+                    endGame('玩家 ' + currentPlayer + ' 獲勝！');
+                    restartGame()
+                } else if (checkTie()) {
+                    endGame('遊戲結束，平局！');
+                    restartGame()
+                } else {
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                }
+            }
+
+            function checkWin() {
+                const winningCombos = [
+                    [0, 1, 2], [3, 4, 5], [6, 7, 8], // 橫線
+                    [0, 3, 6], [1, 4, 7], [2, 5, 8], // 直線
+                    [0, 4, 8], [2, 4, 6] // 對角線
+                ];
+
+                return winningCombos.some(combo => {
+                    return cells[combo[0]].textContent !== '' &&
+                        cells[combo[0]].textContent === cells[combo[1]].textContent &&
+                        cells[combo[1]].textContent === cells[combo[2]].textContent;
+                });
+            }
+
+            function checkTie() {
+                return Array.from(cells).every(cell => cell.textContent !== '');
+            }
+
+            function endGame(message) {
+                gameEnded = true;
+                alert(message);
+            }
+
+            function restartGame() {
+                cells.forEach(cell => {
+                    cell.textContent = '';
+                    cell.classList.remove('X', 'O');
+                });
+
+                currentPlayer = 'O';
+                gameEnded = false;
+            }
+
+            function init() {
+                cells.forEach(cell => {
+                    cell.addEventListener('click', cellClick);
+                });
+
+                restartBtn.addEventListener('click', restartGame);
+            }
+
+            init();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <h1>井字遊戲</h1>
+        <div class="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+</body>
+
+</html>
